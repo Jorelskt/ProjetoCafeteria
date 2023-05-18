@@ -1,0 +1,29 @@
+let navbar = document.querySelector('.menu');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    campoPesquisa.classList.remove('active');
+    tabelaItens.classList.remove('active');
+}
+
+let campoPesquisa = document.querySelector('.campoProcurar');
+
+document.querySelector('#search-btn').onclick = () =>{
+    campoPesquisa.classList.toggle('active');
+    navbar.classList.remove('active');
+    tabelaItens.classList.remove('active');
+}
+
+let tabelaItens = document.querySelector('.seuCarrinho');
+
+document.querySelector('#cart-btn').onclick = () =>{
+    tabelaItens.classList.toggle('active');
+    navbar.classList.remove('active');
+    campoPesquisa.classList.remove('active');
+}
+
+window.scroll = () =>{
+    navbar.classList.remove('active');
+    campoPesquisa.classList.remove('active');
+    tabelaItens.classList.remove('active');
+}
